@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
+import { Chat } from '@mui/icons-material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header/>
+        <div className="appBody">
+          <Sidebar/>
+
+
+              <Routes>
+                <Route path='/room/:roomId'>
+                skibidi
+                {/* <Chat/> */}
+                </Route>
+
+                <Route path="/">
+                Welcome           b nn b n.m nmnbv  vmbhnvbmnjg,  fvchk vmn, vhmj,n vhmn vnm nvv nbm vbnm  vbg,hkbn mj'klo ihupihbhipbfnbjhkvx      
+                </Route>
+
+              </Routes>
+        {/* react-router -> chat screen*/}
+        </div>
+      </Router>
     </div>
   );
 }
